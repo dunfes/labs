@@ -45,7 +45,7 @@ def items():
         new_item = request.json
         catalog.append(new_item)
         save_catalog(catalog)
-        return jsonify({"message": "Товар добавлен!", "item": new_item}), 201
+        return jsonify({"message": "added item successfully", "item": new_item}), 201
 
 # id stuff
 @app.route('/items/<int:item_id>', methods=['GET', 'PUT', 'DELETE'])
